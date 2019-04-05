@@ -1,0 +1,34 @@
+@mixin respond($breakpoint) {
+
+    @if $breakpoint==phone {
+        @media (max-width: 600px) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==tab-potrait {
+        @media (max-width: 900px) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==tab-landscape {
+        @media (max-width: 1200px) {
+            @content
+        }
+
+        ;
+    }
+
+    @if $breakpoint==large {
+        @media (max-width: 1800px) {
+            @content
+        }
+
+        ;
+    }
+}
