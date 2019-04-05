@@ -28,24 +28,26 @@ body {
 }
 
 .App .container {
-  height: 85%;
-  width: 75%;
   background-color: #fff;
   display: block;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
   -webkit-box-shadow: 0 1px 22px 18px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 22px 18px rgba(0, 0, 0, 0.1);
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin: 50px;
+}
+
+@media (max-width: 600px) {
+  .App .container {
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 'story  choose';
+  }
 }
 
 .App .container-choose, .App .container-story {
-  width: 50%;
-  height: 100%;
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -54,6 +56,13 @@ body {
 .App .container-story {
   background: -webkit-gradient(linear, left top, right bottom, from(#4fc1b7), color-stop(#62d5c4), to(#6de0ca));
   background: linear-gradient(to bottom right, #4fc1b7, #62d5c4, #6de0ca);
+}
+
+@media (max-width: 600px) {
+  .App .container-story {
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
 }
 
 .App .container-choose {
@@ -68,6 +77,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 600px) {
+  .App .container-choose {
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
 }
 
 .choose-container {
@@ -141,6 +157,7 @@ body {
 }
 
 .signupcomponent {
+  opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,7 +205,7 @@ body {
 
 .signupcomponent .important p {
   display: inline;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   padding: 2px;
   color: #7e8fa7;
 }
@@ -212,18 +229,20 @@ body {
 
 .signupcomponent .signupcomponent-buttons p {
   display: inline;
-  font-size: 1.1rem;
+  font-size: 1.31rem;
   padding: 2px;
   color: #7e8fa7;
 }
 
 .signupcomponent .signupcomponent-buttons p .terms {
   color: #fff;
+  margin: 8px;
   padding-left: 1px;
   border-bottom: 1px solid #62d5c4;
 }
 
 .signincomponent {
+  opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -297,7 +316,8 @@ body {
   color: #7e8fa7;
   border-bottom: 1px solid #62d5c4;
   padding: 0;
-  margin: 4px;
+  font-size: 1.3rem;
+  margin: 8px;
   display: inline-block;
 }
 
@@ -364,5 +384,16 @@ body {
   width: 5px;
   height: 5px;
   border-radius: 50%;
+}
+
+.main-choose {
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+
+.main-choose * {
+  -webkit-transition: all 6s ease-in-out;
+  transition: all 6s ease-in-out;
+  opacity: 1;
 }
 /*# sourceMappingURL=App.css.map */

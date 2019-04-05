@@ -13,8 +13,10 @@ $card-sign-last: #222f40;
 $blackTextColor: #7e8fa7;
 
 $colorWhite:rgba(255, 255, 255, 0.815);
-
+//importing fonts
 @import url("https://fonts.googleapis.com/css?family=Merriweather|PT+Serif");
+//omporting mixins
+@import './mixins.scss';
 
 html {
     font-size: 62.5%;
@@ -24,6 +26,8 @@ body {
     font-size: 1rem;
 }
 
+
+//styles for main container
 .App {
     font-family: "Merriweather", serif;
 
@@ -40,29 +44,42 @@ body {
     justify-content: center;
     align-items: center;
 
+
     .container {
-        height: 85%;
-        width: 75%;
+
         background-color: #fff;
         display: block;
-        display: flex;
+        display: grid;
         box-shadow: 0 1px 22px 18px rgba(0, 0, 0, 0.1);
-        flex-direction: row;
+        // flex-direction: row;
+        grid-template-columns: 1fr 1fr;
+        margin: 50px;
+
+        @include respond(phone) {
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: 'story  choose'
+
+        }
 
         &-choose,
         &-story {
-            width: 50%;
-            height: 100%;
+
             background-size: cover;
             background-position: 50% 50%;
             background-repeat: no-repeat;
+
         }
 
         &-story {
+
             background: linear-gradient(to bottom right,
                 $card-story-one,
                 $card-story-middle,
                 $card-story-three);
+
+            @include respond(phone) {
+                grid-row: 1
+            }
         }
 
         &-choose {
@@ -74,6 +91,10 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+
+            @include respond(phone) {
+                grid-row: 2
+            }
         }
     }
 }
@@ -149,6 +170,7 @@ body {
 }
 
 .signupcomponent {
+    opacity: 0;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -186,7 +208,7 @@ body {
 
         p {
             display: inline;
-            font-size: 1.4rem;
+            font-size: 1.1rem;
             padding: 2px;
             color: $blackTextColor;
 
@@ -215,12 +237,13 @@ body {
 
         p {
             display: inline;
-            font-size: 1.1rem;
+            font-size: 1.31rem;
             padding: 2px;
             color: $blackTextColor;
 
             .terms {
                 color: #fff;
+                margin: 8px;
                 padding-left: 1px;
                 border-bottom: 1px solid #62d5c4;
             }
@@ -229,6 +252,7 @@ body {
 }
 
 .signincomponent {
+    opacity: 0;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -297,7 +321,8 @@ body {
             color: $blackTextColor;
             border-bottom: 1px solid #62d5c4;
             padding: 0;
-            margin: 4px;
+            font-size: 1.3rem;
+            margin: 8px;
             display: inline-block;
         }
     }
@@ -357,5 +382,16 @@ body {
             height: 5px;
             border-radius: 50%;
         }
+    }
+}
+
+
+.main-choose {
+    transition: all .6s ease-in-out;
+
+    * {
+        transition: all 6s ease-in-out;
+
+        opacity: 1;
     }
 }
