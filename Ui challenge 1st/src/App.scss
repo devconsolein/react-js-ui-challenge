@@ -44,6 +44,10 @@ body {
     justify-content: center;
     align-items: center;
 
+    @include respond(phone) {
+        height: 100%;
+    }
+
 
     .container {
 
@@ -52,14 +56,40 @@ body {
         display: grid;
         box-shadow: 0 1px 22px 18px rgba(0, 0, 0, 0.1);
         // flex-direction: row;
-        grid-template-columns: 1fr 1fr;
-        margin: 50px;
+
+        overflow: hidden;
+
+        @media (min-width: 600px) {
+            grid-template-columns: 1fr 1fr;
+
+        }
+
+        @include respond(large) {
+            margin: 0 190px;
+        }
+
+        @include respond(tab-landscape) {
+            margin: 0 110px;
+        }
+
+        @include respond(tab-potrait) {
+            margin: 0 60px;
+        }
 
         @include respond(phone) {
+            margin: 50px 50px;
             grid-template-rows: 1fr 1fr;
             grid-template-areas: 'story  choose'
 
         }
+
+
+
+
+
+
+
+
 
         &-choose,
         &-story {
@@ -240,6 +270,13 @@ body {
             font-size: 1.31rem;
             padding: 2px;
             color: $blackTextColor;
+            margin: 0;
+
+            @include respond(phone) {
+                font-size: 1rem;
+            }
+
+
 
             .terms {
                 color: #fff;

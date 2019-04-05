@@ -27,6 +27,12 @@ body {
           align-items: center;
 }
 
+@media (max-width: 600px) {
+  .App {
+    height: 100%;
+  }
+}
+
 .App .container {
   background-color: #fff;
   display: block;
@@ -34,13 +40,37 @@ body {
   display: grid;
   -webkit-box-shadow: 0 1px 22px 18px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 22px 18px rgba(0, 0, 0, 0.1);
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  margin: 50px;
+  overflow: hidden;
+}
+
+@media (min-width: 600px) {
+  .App .container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1800px) {
+  .App .container {
+    margin: 0 190px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .App .container {
+    margin: 0 110px;
+  }
+}
+
+@media (max-width: 900px) {
+  .App .container {
+    margin: 0 60px;
+  }
 }
 
 @media (max-width: 600px) {
   .App .container {
+    margin: 50px 50px;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: 'story  choose';
@@ -232,6 +262,13 @@ body {
   font-size: 1.31rem;
   padding: 2px;
   color: #7e8fa7;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .signupcomponent .signupcomponent-buttons p {
+    font-size: 1rem;
+  }
 }
 
 .signupcomponent .signupcomponent-buttons p .terms {
