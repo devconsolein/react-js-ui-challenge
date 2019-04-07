@@ -98,6 +98,7 @@ body {
 .App .container-choose {
   background: -webkit-gradient(linear, left top, right bottom, from(#374a62), color-stop(#2f3f53), to(#222f40));
   background: linear-gradient(to bottom right, #374a62, #2f3f53, #222f40);
+  padding: 55px 35px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
