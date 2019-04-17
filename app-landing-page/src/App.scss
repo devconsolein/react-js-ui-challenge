@@ -1,0 +1,87 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+
+
+html {
+    font-size: 62.5%;
+
+}
+
+body {
+    font-size: 1.8rem;
+
+}
+
+.container {
+    display: block;
+
+    background-color: #EAF0F1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 5px;
+    box-shadow: 0 2px 20px 4px rgba($color: #000000, $alpha: .2);
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+
+    img {
+        height: 350px;
+        width: auto;
+
+    }
+}
+
+.desc {
+    background-color: #fff;
+    padding: 40px;
+    color: #2D4EA3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Cabin', sans-serif;
+
+
+    h1 {
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        font-size: 4.0rem;
+        letter-spacing: 2px;
+    }
+
+    p {
+        margin-bottom: 10px;
+        font-size: 1.6rem;
+    }
+
+    .action-button {
+        margin-top: 45px;
+        width: 100%;
+
+        button {
+            padding: 12px 22px;
+            outline: 0;
+            border: 0;
+            background-color: #2D4EA3;
+            color: #fff;
+            text-transform: uppercase;
+            border-radius: 10px;
+            box-shadow: 0 1px 1px 1px rgba($color: #000000, $alpha: .2);
+            // font-size: 1.6rem;
+            font-weight: bold;
+        }
+    }
+}

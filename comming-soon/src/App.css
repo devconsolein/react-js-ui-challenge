@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,300,400");
+.App {
+  background-image: url("https://images.pexels.com/photos/988872/pexels-photo-988872.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-repeat: no-repeat;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .container {
+  background-color: #ffffff;
+  margin: 50px 150px;
+  display: block;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  position: relative;
+  -webkit-box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+
+.images .clip {
+  background-color: #00cd93;
+  width: 450px;
+  height: 450px;
+  margin: 0;
+  padding: 0;
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  display: block;
+  position: relative;
+  outline: 0;
+}
+
+.images img {
+  width: 450px;
+  height: 450px;
+  display: block;
+  position: absolute;
+}
+
+.desc {
+  font-family: "Raleway", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 25px;
+}
+
+.desc h1 {
+  margin-bottom: 25px;
+  font-weight: 300;
+  font-size: 4rem;
+}
+
+.desc p {
+  margin-bottom: 35px;
+  font-size: 1.5rem;
+}
+
+.desc h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.desc .input-container input {
+  padding: 8px;
+  display: inline-block;
+}
+
+.desc .input-container button {
+  padding: 10px 12px;
+  background-color: #00cd93;
+  color: #fff;
+  outline: none;
+  border: none;
+  display: inline-block;
+  -webkit-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.logos {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+}
+/*# sourceMappingURL=App.css.map */
