@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Serif");
+*,
+*::after,
+*::before {
+  padding: 0;
+  outline: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  background-color: #F5F3F4;
+  font-family: 'PT Serif', serif;
+}
+
+img {
+  width: auto;
+  height: 450px;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 35px;
+  height: 5vh;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.nav .navs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav .navs .text {
+  padding-left: 15px;
+  padding-bottom: 3px;
+}
+
+.text {
+  margin: 5px;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  height: 89vh;
+  overflow: hidden;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section2 {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 50px 50px;
+}
+
+.section2 h3,
+.section2 span,
+.section2 p,
+.section2 .buttons {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.section2 h1 {
+  font-weight: 300;
+  font-size: 3rem;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+}
+
+.section2 h3 {
+  font-size: 2.2rem;
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+}
+
+.section2 p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 2rem;
+}
+
+.section2 span {
+  font-size: 2.5rem;
+}
+
+.section2 .buttons button {
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 10px 25px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 2.0rem;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=App.css.map */

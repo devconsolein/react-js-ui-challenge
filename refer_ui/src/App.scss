@@ -1,0 +1,158 @@
+$colorGreen:#5CD8C6;
+$colorDarkWhite:#C3BEB6;
+$colorAccent:#FFE387;
+$colorWhite:#fff;
+
+@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri:300,400');
+
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+
+}
+
+.App {
+    background-color: $colorGreen;
+}
+
+
+
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 40px;
+    font-size: 1.8rem;
+    font-weight: 300;
+
+    @media (max-width: 900px) {
+        display: none;
+    }
+
+    .link-first,
+    .link-second,
+    .link-third {
+
+
+        * {
+            display: inline-block;
+            margin: 25px 15px;
+            color: $colorWhite;
+            text-decoration: none;
+            text-transform: capitalize;
+
+
+        }
+
+        .logo {
+            text-transform: uppercase;
+        }
+    }
+
+    .link-fourth {
+        * {
+            display: inline-block;
+            margin: 0 5px;
+            color: $colorWhite;
+
+        }
+    }
+}
+
+.App {
+    height: 100vh;
+    width: 100%;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 900px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px;
+    }
+
+    .section1 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        color: $colorWhite;
+        padding-left: 70px;
+
+
+
+        h1 {
+            text-align: left;
+            font-size: 4.5rem;
+            margin-top: 55px;
+
+            span {
+                // padding-top: 5px;
+                margin-bottom: 3px;
+                display: block;
+            }
+        }
+
+        h3 {
+            font-weight: 300;
+            font-size: 1.4rem;
+            padding-bottom: 35px;
+        }
+    }
+
+    .section2 {
+        img {
+            width: 350px;
+            height: 450px;
+        }
+
+        @media (max-width: 900px) {
+            display: none;
+        }
+    }
+
+
+}
+
+
+
+.input {
+    display: block;
+    overflow: hidden;
+
+
+    &-input {
+        border: 0;
+        outline: 0;
+        border-radius: 19px;
+        font-size: 1.4rem;
+        padding: 9px 29px;
+        margin: 10px 0;
+        padding-right: 95px;
+        box-shadow: 0 2px 2px 2px rgba($color: #000000, $alpha: .2);
+
+
+    }
+
+    &-icon {
+        font-size: 1.4rem;
+        // padding-top: 5px;
+        color: #000;
+        left: -70px;
+        position: relative;
+        color: $colorGreen;
+
+        i {
+            font-size: 1.2rem;
+            padding-left: 6px;
+            padding-top: 2px;
+
+        }
+
+    }
+}
